@@ -398,7 +398,7 @@ store a collection of users.
             public function change()
             {
                 $users = $this->table('users');
-                $users->addColumn('username', 'string', ['limit' => 20])
+                $users->addIndex('username', 'string', ['limit' => 20])
                       ->addColumn('password', 'string', ['limit' => 40])
                       ->addColumn('password_salt', 'string', ['limit' => 40])
                       ->addColumn('email', 'string', ['limit' => 100])
